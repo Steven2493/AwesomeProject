@@ -110,6 +110,8 @@ export default class AwesomeProject extends Component {
     return (
       <View style={styles.container}>
         <MapView
+          followsUserLocation={true}
+          showsUserLocation={true}
           style={styles.map}
           Region={this.state.initialPosition}>
 
