@@ -12,25 +12,27 @@ import {
 
 export default class LoginScreen extends Component {
   static navigationOptions = {
-    title: 'Login below',
+    title: 'Welcome Back',
   };
   render() {
     return (
       <View>
-        <View>
-          <Label text="Email" />
+
+          <Text>Email</Text>
           <TextInput
             style={styles.textInput}
           />
-        </View>
 
-        <View>
-          <Label text="Password" />
+          <Text>Password</Text>
           <TextInput
             secureTextEntry={true}
             style={styles.textInput}
           />
-        </View>
+
+          <Button
+            onPress={() => navigate('#')}
+            title="Login" />
+
       </View>
     );
   }
