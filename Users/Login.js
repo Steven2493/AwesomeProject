@@ -10,7 +10,7 @@ import {
   Button,
   } from 'react-native';
 
-class LoginScreen extends Component {
+export default class LoginScreen extends Component {
   static navigationOptions = {
     title: 'Login below',
   };

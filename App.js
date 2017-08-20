@@ -51,14 +51,14 @@ class GlobalScreen extends Component {
 
 const MainScreenNavigator = TabNavigator({
   Home: { screen: HomeScreen },
-  AwesomeProject: { screen: AwesomeProjectScreen}
+  AwesomeProject: { screen: AwesomeProjectScreen},
+  Login: { screen: LoginScreen },
 });
 
 const Navigator = StackNavigator({
   Home: { screen: MainScreenNavigator },
   Global: { screen: GlobalScreen},
   AwesomeProject: { screen: AwesomeProjectScreen},
-  Login: { screen: LoginScreen },
 });
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('AwesomeProject', () => Navigator);
