@@ -1,19 +1,19 @@
 dependencies: \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/Libraries/Image/RCTImageShadowView.m \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/Libraries/Image/RCTImageShadowView.m \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h

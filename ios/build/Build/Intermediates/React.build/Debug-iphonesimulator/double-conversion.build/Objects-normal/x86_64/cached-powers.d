@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/cached-powers.cc \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/utils.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/cached-powers.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/diy-fp.h
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/cached-powers.cc \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/utils.h \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/cached-powers.h \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/third-party/double-conversion-1.1.5/src/diy-fp.h

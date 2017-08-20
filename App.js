@@ -6,7 +6,8 @@ import {
   Button,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-
+import Login from './Users/Login.js';
+import Register from './Users/Register.js';
 import AwesomeProjectScreen from './Map.js';
 
 class HomeScreen extends Component {
@@ -18,6 +19,12 @@ class HomeScreen extends Component {
     return (
       <View>
         <Text>Hello, User!</Text>
+        <Button
+          onPress={() => navigate('Login')}
+          title="Login" />
+        <Button
+          onPress={() => navigate('Register')}
+          title="Register" />
         <Button
           onPress={() => navigate('Global')}
           title="Global High Scores" />

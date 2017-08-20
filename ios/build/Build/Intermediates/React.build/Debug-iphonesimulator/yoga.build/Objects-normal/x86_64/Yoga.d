@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.c \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.c \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
+  /Users/apprentice/Desktop/AwesomeProject/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h
