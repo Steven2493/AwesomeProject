@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/AIRMapCircle.m \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/AIRMapCircle.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/AIRMapCoordinate.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/AIRMap.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/Callout/SMCalloutView.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/node_modules/react-native-maps/lib/ios/AirMaps/RCTConvert+AirMap.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h
