@@ -11,17 +11,11 @@ import {
 export default class PlayerHighScore extends Component {
 
   render(){
-    let {user} = this.props
-
-      return <Text  style={styles.highScoreText}>{user.user}..........{user.score}</Text>
+    let {user, id} = this.props
+    return <Text style={{color:colorText[id % colorText.length], bottom:50, fontSize:20,}} >
+      {user.user}..........{user.score}
+    </Text>
       }
   }
 
-const styles = StyleSheet.create({
-  highScoreText: {
-    color: 'white',
-    bottom:50,
-    fontSize:20,
-    textAlign: 'left',
-  }
-})
+let colorText = ["#18e5d6", "#ff6e1f", "#a5f658", "#9736ce", "#ff12ad"]

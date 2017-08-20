@@ -8,7 +8,7 @@ import {
   Image,
 } from 'react-native'
 import PlayerHighScore from './PlayerHighScore';
-
+import axios from 'axios'
 export default class HighScore extends Component {
 
   constructor(){
@@ -27,45 +27,48 @@ export default class HighScore extends Component {
   }
 
   render(){
+
     return (
-      <Image  source={require('./imgs/pan.jpeg')} style={styles.container}>
-          <View style={[styles.highScoreDiv, styles.floatContainer]}>
+          <View style={styles.highScoreCotainer}>
             <Text style={[styles.highScoreText, styles.highScoreHeader]}>High Score</Text>
-              {this.state.highscore.map(function(user,i) {
-                return <PlayerHighScore key={i} user={user} />
-              }
-            )
-          }
+              <View style={styles.container}>
+                {this.state.highscore.map(function(user,i) {
+                  return (
+                    <PlayerHighScore
+                      key={i}
+                      user={user}
+                      id={i}
+                    />
+                  )
+                }
+              )
+            }
+          </View>
         </View>
-      </Image>
     )
   }
 }
 
+
 const styles = StyleSheet.create({
   highScoreHeader:{
-    bottom:150,
+    bottom:90,
   },
   highScoreText: {
     color: 'white',
-    bottom:50,
+    bottom:40,
     fontSize:20,
   },
   container:{
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    flex: 1,
-    width: undefined,
-    height: undefined,
-    backgroundColor:'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
+
+    justifyContent: 'flex-start',
+
   },
-  highScoreDiv:{
+  highScoreCotainer:{
     flex:1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.7)',
-      height: 400,
-      width: 400,
+    backgroundColor: '#182445',
+
   }
 });
