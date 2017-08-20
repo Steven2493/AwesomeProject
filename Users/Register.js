@@ -1,19 +1,50 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  StyleSheet,
+  Container,
+  TextInput,
+  Label,
   Text,
   View,
   Button,
   } from 'react-native';
 
 export default class RegisterScreen extends Component {
-  static navigation
+  static navigationOptions = {
+    title: 'Create a New Account'
+  };
   render() {
     return (
       <View>
-        <Text>Welcome to PhatPac</Text>
-        <Text>Create an account below:</Text>
+        <Text>Username</Text>
+        <TextInput
+          style={styles.textInput}
+        />
+
+        <Text>Email</Text>
+        <TextInput
+          style={styles.textInput}
+        />
+
+        <Text>Password</Text>
+        <TextInput
+          secureTextEntry={true}
+          style={styles.textInput}
+        />
+
+        <Button
+          onPress={() => navigate('#')}
+          title="Create" />
       </View>
-    )
+    );
   }
 }
+
+const styles = StyleSheet.create({
+  textInput: {
+    height: 80,
+    fontSize: 30,
+    backgroundColor: '#FFF',
+  },
+});

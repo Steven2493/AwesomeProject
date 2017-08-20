@@ -53,6 +53,7 @@ const MainScreenNavigator = TabNavigator({
   Home: { screen: HomeScreen },
   AwesomeProject: { screen: AwesomeProjectScreen},
   Login: { screen: LoginScreen },
+  Register: { screen: RegisterScreen },
 });
 
 const Navigator = StackNavigator({
