@@ -1,38 +1,36 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  StyleSheet,
+  Container,
+  TextInput,
+  Label,
   Text,
   View,
   Button,
   } from 'react-native';
 
-export default class Login extends Component {
+class LoginScreen extends Component {
   static navigationOptions = {
     title: 'Login below',
   };
   render() {
     return (
       <View>
-        <Container>
-          <Button
-            label="Forgot Login/Pass"
-            onPress={this.press.bind(this)} />
-        </Container>
-
-        <Container>
+        <View>
           <Label text="Email" />
           <TextInput
             style={styles.textInput}
           />
-        </Container>
+        </View>
 
-        <Container>
+        <View>
           <Label text="Password" />
           <TextInput
             secureTextEntry={true}
             style={styles.textInput}
           />
-        </Container>
+        </View>
       </View>
     );
   }
@@ -42,6 +40,6 @@ const styles = StyleSheet.create({
   textInput: {
     height: 80,
     fontSize: 30,
-    backgroundColor: '#FFF'
-  }
+    backgroundColor: '#FFF',
+  },
 });

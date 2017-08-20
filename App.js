@@ -6,8 +6,8 @@ import {
   Button,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-import Login from './Users/Login.js';
-import Register from './Users/Register.js';
+import LoginScreen from './Users/Login.js';
+import RegisterScreen from './Users/Register.js';
 import AwesomeProjectScreen from './Map.js';
 
 class HomeScreen extends Component {
@@ -57,7 +57,8 @@ const MainScreenNavigator = TabNavigator({
 const Navigator = StackNavigator({
   Home: { screen: MainScreenNavigator },
   Global: { screen: GlobalScreen},
-  AwesomeProject: { screen: AwesomeProjectScreen}
+  AwesomeProject: { screen: AwesomeProjectScreen},
+  Login: { screen: LoginScreen },
 });
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('AwesomeProject', () => Navigator);

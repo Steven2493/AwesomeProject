@@ -6,7 +6,8 @@ import {
   Button,
   } from 'react-native';
 
-export default class Register extends Component {
+export default class RegisterScreen extends Component {
+  static navigation
   render() {
     return (
       <View>
