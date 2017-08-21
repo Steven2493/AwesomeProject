@@ -58,7 +58,7 @@ class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.homeContainer}>
-        <Text style={styles.globalFont}> Hello, User!</Text>
+        <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
         <Text style={styles.globalFont}> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
         <Text style={styles.globalFont}> Recent games: </Text>
         {this.state.recentGames.map((game, i) => {
@@ -75,13 +75,13 @@ class HomeScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Welcome User',
+    title: "Stats",
   };
 
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
+      <View style={styles.homeContainer} >
        { this.state.userid === "" ? <ControlScreen /> : this.userPage() }
       </View>
     );
