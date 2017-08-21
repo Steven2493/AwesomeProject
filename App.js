@@ -39,7 +39,7 @@ class HomeScreen extends Component {
 
     AsyncStorage.getItem("userId").then((value) => {
       this.setState({userid: value});
-      axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
+      axios.get('http://localhost:3000/users/' + this.state.userid )
         .then((response) => {
         let games = response.data.map((game) => {
           return game
@@ -58,7 +58,7 @@ class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.homeContainer}>
-        <Text style={styles.globalFont}> Hello, User!</Text>
+        <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
         <Text style={styles.globalFont}> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
         <Text style={styles.globalFont}> Recent games: </Text>
         {this.state.recentGames.map((game, i) => {
@@ -75,13 +75,13 @@ class HomeScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Welcome User',
+    title: "Stats",
   };
 
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
+      <View style={styles.homeContainer} >
        { this.state.userid === "" ? <ControlScreen /> : this.userPage() }
       </View>
     );
