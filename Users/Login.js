@@ -12,6 +12,8 @@ import {
   } from 'react-native';
 
 import styles from '../Style'
+import axios from 'react-native-axios';
+
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props)
@@ -26,6 +28,7 @@ export default class LoginScreen extends Component {
     title: 'Welcome Back',
   };
 
+
   // componentDidMount() {
   //   axios.post('http://localhost:8080/users')
   //   .then((response) => {
@@ -36,6 +39,7 @@ export default class LoginScreen extends Component {
   //     })
   //   })
   // }
+
 
   render() {
     return (
