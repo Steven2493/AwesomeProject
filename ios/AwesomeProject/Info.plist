@@ -51,7 +51,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Pixeled-Regular.ttf</string>
+		<string>pacman.ttf</string>
 		<string>Pixeled.ttf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>

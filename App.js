@@ -7,8 +7,10 @@ import {
   AsyncStorage,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
+
 import axios from 'react-native-axios';
 import ControlScreen from './Users/UserControl.js';
+
 import AwesomeProjectScreen from './Map.js';
 import HighScoreScreen from './HighScoreScreen';
 

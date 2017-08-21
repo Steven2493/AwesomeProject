@@ -27,15 +27,18 @@ export default class LoginScreen extends Component {
     title: 'Welcome Back',
   };
 
-  componentDidMount() {
-    axios.post('http://localhost:8080/users')
-    .then((response) => {
-      console.log(response)
-      // let login = response.data
-      // this.setState({
-      //   email: this.response.
-    })
-  }
+
+  // componentDidMount() {
+  //   axios.post('http://localhost:8080/users')
+  //   .then((response) => {
+  //     console.log(response)
+  //     // let login = response.data
+  //     // this.setState({
+  //     //   email: this.response.
+  //     })
+  //   })
+  // }
+
 
   render() {
     return (
