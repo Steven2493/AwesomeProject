@@ -11,9 +11,19 @@ import {
   } from 'react-native';
 
 export default class LoginScreen extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      email: '',
+      password: '',
+    }
+  }
+
   static navigationOptions = {
     title: 'Welcome Back',
   };
+
   render() {
     return (
       <View>
@@ -21,6 +31,8 @@ export default class LoginScreen extends Component {
           <Text>Email</Text>
           <TextInput
             style={styles.textInput}
+            returnKeyLabel = {"email"}
+            onChangeText={(text) => this.setState({email:text})}
           />
 
           <Text>Password</Text>
@@ -40,8 +52,8 @@ export default class LoginScreen extends Component {
 
 const styles = StyleSheet.create({
   textInput: {
-    height: 80,
-    fontSize: 30,
+    height: 40,
+    fontSize: 15,
     backgroundColor: '#FFF',
   },
 });

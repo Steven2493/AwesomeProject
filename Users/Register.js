@@ -35,7 +35,7 @@ export default class RegisterScreen extends Component {
 
         <Button
           onPress={() => navigate('#')}
-          title="Create" />
+          title="Create Account" />
       </View>
     );
   }
@@ -43,8 +43,8 @@ export default class RegisterScreen extends Component {
 
 const styles = StyleSheet.create({
   textInput: {
-    height: 80,
-    fontSize: 30,
+    height: 40,
+    fontSize: 15,
     backgroundColor: '#FFF',
   },
 });
