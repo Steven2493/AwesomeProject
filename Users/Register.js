@@ -19,10 +19,17 @@ export default class RegisterScreen extends Component {
       password: '',
     }
   }
+
+  pressMe(){
+    this.props.press();
+  }
+
   static navigationOptions = {
     title: 'Create a New Account'
   };
+
   render() {
+
     return (
       <View>
         <Text>Username</Text>
@@ -47,10 +54,16 @@ export default class RegisterScreen extends Component {
         <Button
           onPress={() => navigate('#')}
           title="Create Account" />
+
+        <Button
+          onPress={ this.pressMe.bind(this) }
+          title="already have an account?" />
+
       </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   textInput: {
@@ -59,3 +72,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
 });
+
