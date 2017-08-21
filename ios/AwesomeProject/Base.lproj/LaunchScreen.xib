@@ -33,8 +33,8 @@
                     <color key="textColor" red="0.9431266191709845" green="0.85662920551284971" blue="0.17110031932237696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVN-6h-3LE">
-                    <rect key="frame" x="120" y="222" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pan" translatesAutoresizingMaskIntoConstraints="NO" id="sVN-6h-3LE">
+                    <rect key="frame" x="137" y="195" width="204" height="196"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -52,4 +52,7 @@
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="pan" width="460" height="460"/>
+    </resources>
 </document>

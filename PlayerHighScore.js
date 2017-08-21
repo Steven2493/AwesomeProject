@@ -9,13 +9,24 @@ import {
 } from 'react-native'
 
 export default class PlayerHighScore extends Component {
+  imageBuilder(i){
+    return(
+      <Image
+        style={{width: 20, height: 20, marginTop:10}}
+        source={images[i]}
+      />
+    )
+  }
 
   render(){
-    let {user, id} = this.props
-    return <Text style={{color:colorText[id % colorText.length], bottom:50, fontSize:10, padding: 5,fontFamily:"Pixeled"}} >
+    let {user, index} = this.props
+
+    return <Text style={{color: colorText[index % colorText.length], bottom:50, fontSize:10, padding: 5,fontFamily:"Pixeled"}} >
+      {index < 3 ? this.imageBuilder(index) : this.imageBuilder(index)}
       {user.user}..........{user.score}
-    </Text>
+      </Text>
       }
   }
 
 let colorText = ["#18e5d6", "#ff6e1f", "#a5f658", "#9736ce", "#ff12ad"]
+let images = [require('./imgs/1.png'), require('./imgs/2.png'), require('./imgs/3.png')]

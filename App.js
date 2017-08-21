@@ -8,6 +8,8 @@ import {
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
+import styles from './Style'
+
 import axios from 'react-native-axios';
 import ControlScreen from './Users/UserControl.js';
 
@@ -55,12 +57,12 @@ class HomeScreen extends Component {
   userPage(){
     const { navigate } = this.props.navigation;
     return (
-      <View>
-        <Text> Hello, User!</Text>
-        <Text> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
-        <Text> Recent games: </Text>
+      <View style={styles.homeContainer}>
+        <Text style={styles.globalFont}> Hello, User!</Text>
+        <Text style={styles.globalFont}> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
+        <Text style={styles.globalFont}> Recent games: </Text>
         {this.state.recentGames.map((game, i) => {
-          return <Text key={i}> - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
+          return <Text key={i} style={styles.globalFont} > - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
         })}
         <Button
           onPress={() => navigate('Global')}
