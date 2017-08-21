@@ -7,8 +7,8 @@ import {
   AsyncStorage,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-
-import axios from 'react-native-axios';
+//
+// import axios from 'react-native-axios';
 
 
 import LoginScreen from './Users/Login.js';
