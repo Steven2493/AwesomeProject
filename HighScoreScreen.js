@@ -40,7 +40,7 @@ export default class HighScore extends Component {
                     <PlayerHighScore
                       key={i}
                       user={user}
-                      id={i}
+                      index={i}
                     />
                   )
                 }
