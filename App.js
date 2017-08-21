@@ -7,7 +7,9 @@ import {
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
+import axios from 'axios';
 import AwesomeProjectScreen from './Map.js';
+import HighScoreScreen from './HighScoreScreen';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -29,19 +31,6 @@ class HomeScreen extends Component {
   }
 }
 
-class GlobalScreen extends Component {
-  static navigationOptions = {
-    title: 'Global High Scores',
-  };
-  render() {
-    return (
-      <View>
-        <Text>Global High Scores</Text>
-      </View>
-    );
-  }
-}
-
 const MainScreenNavigator = TabNavigator({
   Home: { screen: HomeScreen },
   AwesomeProject: { screen: AwesomeProjectScreen}
@@ -49,7 +38,7 @@ const MainScreenNavigator = TabNavigator({
 
 const Navigator = StackNavigator({
   Home: { screen: MainScreenNavigator },
-  Global: { screen: GlobalScreen},
+  Global: { screen: HighScoreScreen},
   AwesomeProject: { screen: AwesomeProjectScreen}
 });
 // skip this line if using Create React Native App

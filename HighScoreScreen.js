@@ -30,7 +30,7 @@ export default class HighScore extends Component {
 
     return (
           <View style={styles.highScoreCotainer}>
-            <Text style={[styles.highScoreText, styles.highScoreHeader]}>High Score</Text>
+            <Text style={styles.highScoreText}>High Score</Text>
               <View style={styles.container}>
                 {this.state.highscore.map(function(user,i) {
                   return (
@@ -51,12 +51,9 @@ export default class HighScore extends Component {
 
 
 const styles = StyleSheet.create({
-  highScoreHeader:{
-    bottom:90,
-  },
   highScoreText: {
     color: 'white',
-    bottom:40,
+    bottom:60,
     fontSize:20,
   },
   container:{

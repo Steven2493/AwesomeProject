@@ -12,7 +12,7 @@ export default class PlayerHighScore extends Component {
 
   render(){
     let {user, id} = this.props
-    return <Text style={{color:colorText[id % colorText.length], bottom:50, fontSize:20,}} >
+    return <Text style={{color:colorText[id % colorText.length], bottom:50, fontSize:20, padding: 5}} >
       {user.user}..........{user.score}
     </Text>
       }
