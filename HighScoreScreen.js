@@ -10,7 +10,7 @@ import {
 
 import PlayerHighScore from './PlayerHighScore';
 import axios from 'axios'
-import styles from './Styles'
+import styles from './Style'
 
 export default class HighScore extends Component {
 
@@ -34,7 +34,7 @@ export default class HighScore extends Component {
     return (
           <View style={styles.highScoreCotainer}>
             <Text style={styles.highScoreText}>High Score</Text>
-              <View style={styles.container}>
+              <View style={styles.PlayersScoreContainer}>
                 {this.state.highscore.map(function(user,i) {
                   return (
                     <PlayerHighScore
@@ -51,23 +51,3 @@ export default class HighScore extends Component {
     )
   }
 }
-
-
-// const styles = StyleSheet.create({
-//   // highScoreText: {
-//   //   color: 'white',
-//   //   bottom:60,
-//   //   fontSize:20,
-//   //   fontFamily:'Pixeled'
-//   // },
-//   container:{
-//     justifyContent: 'flex-start',
-//   },
-//   highScoreCotainer:{
-//     flex:1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#182445',
-//
-//   }
-// });
