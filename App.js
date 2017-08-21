@@ -7,21 +7,15 @@ import {
   AsyncStorage,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-
 import axios from 'react-native-axios';
-
-
-import LoginScreen from './Users/Login.js';
-import RegisterScreen from './Users/Register.js';
-
-
-import axios from 'axios';
-
-
+import ControlScreen from './Users/UserControl.js';
 import AwesomeProjectScreen from './Map.js';
 import HighScoreScreen from './HighScoreScreen';
 
+//user is hardcoded right here - once login/register works remove this line
 AsyncStorage.setItem('userId', '3');
+// AsyncStorage.removeItem('userId');
+
 
 class HomeScreen extends Component {
 
@@ -29,13 +23,16 @@ class HomeScreen extends Component {
     super()
     this.state = {
       userid: "",
+      username: "",
       highscorePoints: "",
       highscoreDate: "",
       recentGames: []
     }
+    this.userPage = this.userPage.bind(this)
   }
 
   componentDidMount() {
+
     AsyncStorage.getItem("userId").then((value) => {
       this.setState({userid: value});
       axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
@@ -46,18 +43,15 @@ class HomeScreen extends Component {
         this.setState({
           highscorePoints: response.data[0].highscore_score,
           highscoreDate: response.data[0].highscore_date,
+          username: response.data[0].username,
           recentGames: games
         })
       });
     }).done();
-
   }
 
-  static navigationOptions = {
-    title: 'Welcome User',
-  };
-  render() {
-    const {navigate} = this.props.navigation;
+  userPage(){
+    const { navigate } = this.props.navigation;
     return (
       <View>
         <Text> Hello, User!</Text>
@@ -67,35 +61,40 @@ class HomeScreen extends Component {
           return <Text key={i}> - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
         })}
         <Button
-          onPress={() => navigate('Login')}
-          title="Login" />
-        <Button
-          onPress={() => navigate('Register')}
-          title="Register" />
-        <Button
           onPress={() => navigate('Global')}
           title="Global High Scores" />
         <Button
           onPress={() => navigate('AwesomeProject')}
           title="New Game" />
       </View>
+    )
+  }
+
+  static navigationOptions = {
+    title: 'Welcome User',
+  };
+
+  render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <View>
+       { this.state.userid === "" ? <ControlScreen /> : this.userPage() }
+      </View>
     );
   }
 }
 
-const MainScreenNavigator = TabNavigator({
-  Home: { screen: HomeScreen },
-  AwesomeProject: { screen: AwesomeProjectScreen},
-  Login: { screen: LoginScreen },
-  Register: { screen: RegisterScreen },
-});
+  const MainScreenNavigator = TabNavigator({
+    Home: { screen: HomeScreen },
+    AwesomeProject: { screen: AwesomeProjectScreen},
+  });
 
-const Navigator = StackNavigator({
-  Home: { screen: MainScreenNavigator },
+  const Navigator = StackNavigator({
+    Home: { screen: MainScreenNavigator },
+    Global: { screen: HighScoreScreen},
+    AwesomeProject: { screen: AwesomeProjectScreen},
+  });
 
-  Global: { screen: HighScoreScreen},
-  AwesomeProject: { screen: AwesomeProjectScreen}
 
-});
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('AwesomeProject', () => Navigator);
