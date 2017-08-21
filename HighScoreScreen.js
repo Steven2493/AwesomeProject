@@ -7,8 +7,11 @@ import {
   Dimensions,
   Image,
 } from 'react-native'
+
 import PlayerHighScore from './PlayerHighScore';
 import axios from 'axios'
+import styles from './Styles'
+
 export default class HighScore extends Component {
 
   constructor(){
@@ -50,22 +53,21 @@ export default class HighScore extends Component {
 }
 
 
-const styles = StyleSheet.create({
-  highScoreText: {
-    color: 'white',
-    bottom:60,
-    fontSize:20,
-  },
-  container:{
-
-    justifyContent: 'flex-start',
-
-  },
-  highScoreCotainer:{
-    flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#182445',
-
-  }
-});
+// const styles = StyleSheet.create({
+//   // highScoreText: {
+//   //   color: 'white',
+//   //   bottom:60,
+//   //   fontSize:20,
+//   //   fontFamily:'Pixeled'
+//   // },
+//   container:{
+//     justifyContent: 'flex-start',
+//   },
+//   highScoreCotainer:{
+//     flex:1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#182445',
+//
+//   }
+// });
