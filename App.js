@@ -7,7 +7,12 @@ import {
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
+import LoginScreen from './Users/Login.js';
+import RegisterScreen from './Users/Register.js';
+
+
 import axios from 'axios';
+
 import AwesomeProjectScreen from './Map.js';
 import HighScoreScreen from './HighScoreScreen';
 
@@ -21,6 +26,12 @@ class HomeScreen extends Component {
       <View>
         <Text>Hello, User!</Text>
         <Button
+          onPress={() => navigate('Login')}
+          title="Login" />
+        <Button
+          onPress={() => navigate('Register')}
+          title="Register" />
+        <Button
           onPress={() => navigate('Global')}
           title="Global High Scores" />
         <Button
@@ -33,13 +44,17 @@ class HomeScreen extends Component {
 
 const MainScreenNavigator = TabNavigator({
   Home: { screen: HomeScreen },
-  AwesomeProject: { screen: AwesomeProjectScreen}
+  AwesomeProject: { screen: AwesomeProjectScreen},
+  Login: { screen: LoginScreen },
+  Register: { screen: RegisterScreen },
 });
 
 const Navigator = StackNavigator({
   Home: { screen: MainScreenNavigator },
+
   Global: { screen: HighScoreScreen},
   AwesomeProject: { screen: AwesomeProjectScreen}
+
 });
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('AwesomeProject', () => Navigator);

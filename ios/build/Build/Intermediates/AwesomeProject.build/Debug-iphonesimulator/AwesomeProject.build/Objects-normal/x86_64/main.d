@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/AwesomeProject/main.m \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/AwesomeProject/AppDelegate.h
+  /Users/apprentice/Desktop/AwesomeProject/ios/AwesomeProject/main.m \
+  /Users/apprentice/Desktop/AwesomeProject/ios/AwesomeProject/AppDelegate.h
