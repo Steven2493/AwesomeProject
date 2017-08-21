@@ -2,6 +2,11 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const {width, height} = Dimensions.get('window')
 export default StyleSheet.create({
+
+  globalFont: {
+    fontFamily: 'Pixeled',
+    color:'white'
+  },
   // Css for HighScoreScreen.js
   highScoreText: {
     color: 'white',
@@ -88,5 +93,11 @@ export default StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontFamily: 'Pixeled'
+  },
+  // Homepage Css
+  homeContainer:{
+    flex: 1,
+    backgroundColor: '#182445',
+    justifyContent: 'center',
   }
 });

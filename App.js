@@ -10,7 +10,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 //
 // import axios from 'react-native-axios';
 
-
+import styles from './Style'
 import LoginScreen from './Users/Login.js';
 import RegisterScreen from './Users/Register.js';
 
@@ -59,12 +59,12 @@ class HomeScreen extends Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View>
-        <Text> Hello, User!</Text>
-        <Text> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
-        <Text> Recent games: </Text>
+      <View style={styles.homeContainer}>
+        <Text style={styles.globalFont}> Hello, User!</Text>
+        <Text style={styles.globalFont}> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
+        <Text style={styles.globalFont}> Recent games: </Text>
         {this.state.recentGames.map((game, i) => {
-          return <Text key={i}> - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
+          return <Text key={i} style={styles.globalFont} > - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
         })}
         <Button
           onPress={() => navigate('Login')}
