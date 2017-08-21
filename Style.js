@@ -72,5 +72,21 @@ export default StyleSheet.create({
     marginTop: 10,
     color: '#f44242',
     textAlign: 'center'
+  },
+  // CSS for log in
+  textInput: {
+    height: 40,
+    fontSize: 15,
+    backgroundColor: '#FFF',
+  },
+  loginContainer:{
+    flex: 1,
+    backgroundColor: '#182445',
+    justifyContent: 'center',
+  },
+  loginTextInfo:{
+    textAlign: 'center',
+    color: 'white',
+    fontFamily: 'Pixeled'
   }
 });

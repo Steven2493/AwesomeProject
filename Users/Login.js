@@ -8,8 +8,10 @@ import {
   Text,
   View,
   Button,
+  TouchableHighlight,
   } from 'react-native';
 
+import styles from '../Style'
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props)
@@ -37,34 +39,26 @@ export default class LoginScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.loginContainer}>
 
-          <Text>Email</Text>
+          <Text style={styles.loginTextInfo}>Email</Text>
           <TextInput
             style={styles.textInput}
             returnKeyLabel = {"email"}
             onChangeText={(text) => this.setState({email:text})}
           />
 
-          <Text>Password</Text>
+          <Text style={styles.loginTextInfo}>Password</Text>
           <TextInput
             secureTextEntry={true}
             style={styles.textInput}
           />
 
-          <Button
-            onPress={() => navigate('#')}
-            title="Login" />
+          <TouchableHighlight onPress={() => navigate('#')}>
+            <Text style={{color:"white", textAlign:'center', fontFamily:"Pixeled"}}>Login</Text>
+          </TouchableHighlight>
 
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  textInput: {
-    height: 40,
-    fontSize: 15,
-    backgroundColor: '#FFF',
-  },
-});
