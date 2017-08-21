@@ -9,7 +9,7 @@ export default StyleSheet.create({
     fontSize:20,
     fontFamily:'Pixeled'
   },
-  container:{
+  PlayersScoreContainer:{
     justifyContent: 'flex-start',
   },
   highScoreCotainer:{
