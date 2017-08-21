@@ -7,8 +7,11 @@ import {
   Dimensions,
   Image,
 } from 'react-native'
+
 import PlayerHighScore from './PlayerHighScore';
 import axios from 'axios'
+import styles from './Style'
+
 export default class HighScore extends Component {
 
   constructor(){
@@ -30,8 +33,8 @@ export default class HighScore extends Component {
 
     return (
           <View style={styles.highScoreCotainer}>
-            <Text style={[styles.highScoreText, styles.highScoreHeader]}>High Score</Text>
-              <View style={styles.container}>
+            <Text style={styles.highScoreText}>High Score</Text>
+              <View style={styles.PlayersScoreContainer}>
                 {this.state.highscore.map(function(user,i) {
                   return (
                     <PlayerHighScore
@@ -48,27 +51,3 @@ export default class HighScore extends Component {
     )
   }
 }
-
-
-const styles = StyleSheet.create({
-  highScoreHeader:{
-    bottom:90,
-  },
-  highScoreText: {
-    color: 'white',
-    bottom:40,
-    fontSize:20,
-  },
-  container:{
-
-    justifyContent: 'flex-start',
-
-  },
-  highScoreCotainer:{
-    flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#182445',
-
-  }
-});

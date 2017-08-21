@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/AwesomeProjectTests/AwesomeProjectTests.m \
+  /Users/apprentice/Desktop/AwesomeProject/ios/AwesomeProjectTests/AwesomeProjectTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \
@@ -35,14 +35,14 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/soffiprropp/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/apprentice/Desktop/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
