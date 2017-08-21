@@ -39,7 +39,7 @@ class HomeScreen extends Component {
 
     AsyncStorage.getItem("userId").then((value) => {
       this.setState({userid: value});
-      axios.get('http://localhost:3000/users/' + this.state.userid )
+      axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
         .then((response) => {
         let games = response.data.map((game) => {
           return game
