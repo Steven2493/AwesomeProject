@@ -12,7 +12,7 @@ import {
   } from 'react-native';
 
 import styles from '../Style'
-import axios from 'react-native-axios';
+import axios from 'axios';
 
 export default class LoginScreen extends Component {
   constructor(props) {
