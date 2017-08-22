@@ -86,6 +86,3 @@ export default class RegisterScreen extends Component {
     );
   }
 }
-
-
-AppRegistry.registerComponent('AwesomeProject', () => RegisterScreen);

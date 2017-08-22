@@ -4,4 +4,4 @@
  * @flow
  */
 
-import './Users/Register';
+import './App';
