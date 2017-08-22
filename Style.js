@@ -10,7 +10,7 @@ export default StyleSheet.create({
   // Css for HighScoreScreen.js
   highScoreText: {
     color: 'white',
-    bottom:60,
+    bottom:50,
     fontSize:20,
     fontFamily:'Pixeled'
   },
