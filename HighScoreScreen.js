@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 import PlayerHighScore from './PlayerHighScore';
-import axios from 'react-native-axios'
+import axios from 'axios'
 import styles from './Style'
 
 export default class HighScore extends Component {

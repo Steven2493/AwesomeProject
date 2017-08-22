@@ -132,6 +132,11 @@ export default StyleSheet.create({
     fontFamily: 'Pixeled',
     color:'white',
     top:50,
-  }
+  },
+  textInput: {
+    height: 40,
+    fontSize: 15,
+    backgroundColor: '#FFF',
+  },
 
 });
