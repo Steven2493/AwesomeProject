@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
-  Container,
   TextInput,
-  Label,
   Text,
   View,
   Button,
