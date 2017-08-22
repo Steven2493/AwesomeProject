@@ -6,15 +6,18 @@ import {
   View,
   Button,
   AsyncStorage,
+  NavigatorIOS,
   AppRegistry,
   TouchableHighlight,
+
   } from 'react-native';
 
 import styles from '../Style'
-
+import { StackNavigator } from 'react-navigation';
 import axios from 'axios';
 
 export default class LoginScreen extends Component {
+
   constructor(props) {
     super(props)
 
@@ -23,6 +26,8 @@ export default class LoginScreen extends Component {
     }
     this.login = this.login.bind(this);
   }
+
+
 
   static navigationOptions = {
     title: 'Welcome Back',
@@ -34,14 +39,20 @@ export default class LoginScreen extends Component {
       password: this.state.password}
     })
     .then((response) => {
-      let user = response.data.id
-      this.setState({ userID: user });mail.
-      AsyncStorage.setItem('userId', JSON.stringify(user))
+      let user = response.data.id.toString();
+      this.setState({ userID: user });
+      AsyncStorage.setItem('userId', this.state.userID)
+      debugger
+      this.props.navigate.push({
+      component: HomeScreen
+    })
     })
     .catch(function (error) {
       console.log(error)
     })
+
   };
+
 
   render() {
     return (
