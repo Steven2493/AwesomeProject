@@ -9,6 +9,8 @@ import {
   } from 'react-native';
 import axios from 'axios';
 
+const onRegister = () => AsyncStorage.setItem(USER_KEY, "true")
+
 export default class RegisterScreen extends Component {
   constructor(props) {
     super(props)
@@ -27,7 +29,7 @@ export default class RegisterScreen extends Component {
   };
 
   register = () => {
-    axios.post('http://localhost:8080/users', {register: {
+    axios.post('https://phatpac.herokuapp.com/users', {user: {
       username: this.state.username,
       email: this.state.email,
       password: this.state.password}
@@ -36,6 +38,7 @@ export default class RegisterScreen extends Component {
     let user = response.data.id
     this.setState({ userID: user });
     AsyncStorage.setItem('userId', JSON.stringify(user))
+    navigate("SignedIn")
   })
   .catch(function (error) {
     console.log(error)
@@ -65,8 +68,7 @@ export default class RegisterScreen extends Component {
           secureTextEntry={true}
           style={styles.textInput}
           onChangeText={(password) => this.setState({password})}
-          value={this.state.password}
-        />
+          value={this.state.password} />
 
         <Button
           onPress={() => this.register() }

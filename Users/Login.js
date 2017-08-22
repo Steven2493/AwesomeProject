@@ -27,13 +27,13 @@ export default class LoginScreen extends Component {
   };
 
   login = () => {
-    axios.post('http://localhost:8080/sessions', {login: {
+    axios.post('https://phatpac.herokuapp.com/sessions', {login: {
       email: this.state.email,
       password: this.state.password}
     })
     .then((response) => {
       let user = response.data.id
-      this.setState({ userID: user });
+      this.setState({ userID: user });mail.
       AsyncStorage.setItem('userId', JSON.stringify(user))
     })
     .catch(function (error) {
@@ -69,10 +69,4 @@ export default class LoginScreen extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  textInput: {
-    height: 40,
-    fontSize: 15,
-    backgroundColor: '#FFF',
-  },
-});
+
