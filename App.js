@@ -63,18 +63,18 @@ class HomeScreen extends Component {
       <View style={styles.homeContainer}>
         <View style={styles.userStats}>
           <Text style={styles.homeScreenText}> Hello, User!</Text>
-          <Text style={styles.homeScreenText}> Personal Best: {this.state.highscorePoints}{"\n"} Points On {this.state.highscoreDate} </Text>
+          <Text style={styles.homeScreenText}> Personal Best:{"\n"} {this.state.highscorePoints} Points On {this.state.highscoreDate} </Text>
           <Text style={styles.homeScreenText}> Recent Game: </Text>
           {this.state.recentGames.map((game, i) => {
-            return <Text key={i} style={styles.homeScreenText}>     -Points: {game.score}{"\n"}     -Duration: {game.duration}{"\n"}     -Played On: {game.created_at}</Text>
+            return <Text key={i} style={styles.homeScreenText}>     Points: {game.score}{"\n"}     Duration: {game.duration}{"\n"}     Played On: {game.created_at}</Text>
           })}
         </View>
           <View>
             <TouchableHighlight onPress={() => navigate('Global')}>
-              <Text style={styles.homeScreenText}>Global High Score</Text>
+              <Text style={[styles.homeScreenText, styles.textYellow]}>Global High Score</Text>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => navigate('AwesomeProject')}>
-              <Text style={styles.homeScreenText}>New Game</Text>
+              <Text style={[styles.homeScreenText, styles.textYellow]}>New Game</Text>
             </TouchableHighlight>
           </View>
       </View>

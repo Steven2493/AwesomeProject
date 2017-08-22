@@ -115,8 +115,10 @@ export default StyleSheet.create({
     textAlign: "center",
   },
   userStats:{
-    bottom:90,
+    bottom:80,
     justifyContent: 'center',
   },
-
+  textYellow:{
+    color:"yellow"
+  },
 });
