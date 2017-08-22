@@ -24,7 +24,6 @@ export default class LoginScreen extends Component {
   };
 
   login = () => {
-<<<<<<< HEAD
     axios.post('http://localhost:8080/sessions', {login: {
       email: this.state.email,
       password: this.state.password}
@@ -37,19 +36,6 @@ export default class LoginScreen extends Component {
     .catch(function (error) {
       console.log(error)
     })
-=======
-    axios.post('http://localhost:8080/users', {login: {
-      email: this.state.email,
-      password: this.state.password}
-    })
-    .then((response) => {
-      console.log(response)
-    //   let login = response.data
-    //   this.setState({
-    //     email: this.response.
-    //   })
-    })
->>>>>>> Create axios call for login
   };
 
   render() {
