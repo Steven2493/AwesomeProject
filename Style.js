@@ -99,5 +99,24 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#182445',
     justifyContent: 'center',
-  }
+  },
+  homeScreenText: {
+    textAlign:"center",
+    color:"white",
+    fontSize:10,
+    padding: 5,
+    fontFamily: "Pixeled"
+  },
+  homeScreenNav:{
+    color:"white",
+    fontSize:10,
+    padding: 5,
+    fontFamily: "Pixeled",
+    textAlign: "center",
+  },
+  userStats:{
+    bottom:90,
+    justifyContent: 'center',
+  },
+
 });
