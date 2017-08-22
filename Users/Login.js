@@ -6,6 +6,8 @@ import {
   View,
   Button,
   AsyncStorage,
+  AppRegistry,
+  TouchableHighlight,
   } from 'react-native';
 
 import styles from '../Style'
@@ -43,36 +45,27 @@ export default class LoginScreen extends Component {
 
   render() {
     return (
-      <View>
-
-          <Text>Email</Text>
-          <TextInput
+      <View style={styles.loginContainer}>
+          <Text style={[styles.globalFont,{padding:10}]}>Email</Text>
+          <TextInput autoCapitalize="none"
             style={styles.textInput}
             onChangeText={(email) => this.setState({email})}
             value={this.state.email}
           />
-
-          <Text>Password</Text>
-          <TextInput
+          <Text style={[styles.globalFont,{padding:10}]}>Password</Text>
+          <TextInput autoCapitalize="none"
             style = {styles.textInput}
             secureTextEntry={true}
             onChangeText={(password) => this.setState({password})}
             value={this.state.password}
           />
 
-          <Button
-            onPress={() => this.login() }
-            title="Login" />
-
+          <TouchableHighlight onPress={() => this.login() }>
+            <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Login </Text>
+          </TouchableHighlight>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  textInput: {
-    height: 40,
-    fontSize: 15,
-    backgroundColor: '#FFF',
-  },
-});
+AppRegistry.registerComponent('AwesomeProject', () => LoginScreen);

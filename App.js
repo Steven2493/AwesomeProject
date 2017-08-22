@@ -20,8 +20,8 @@ import AwesomeProjectScreen from './Map.js';
 import HighScoreScreen from './HighScoreScreen';
 
 //user is hardcoded right here - once login/register works remove this line
-AsyncStorage.setItem('userId', '3');
-// AsyncStorage.removeItem('userId');
+// AsyncStorage.setItem('userId', '3');
+AsyncStorage.removeItem('userId');
 
 
 class HomeScreen extends Component {

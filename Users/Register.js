@@ -3,11 +3,15 @@ import {
   StyleSheet,
   TextInput,
   Text,
+  AppRegistry,
   View,
   Button,
+  TouchableHighlight,
   AsyncStorage,
   } from 'react-native';
+
 import axios from 'axios';
+import styles from '../Style'
 
 export default class RegisterScreen extends Component {
   constructor(props) {
@@ -45,36 +49,38 @@ export default class RegisterScreen extends Component {
   render() {
 
     return (
-      <View>
-        <Text>Username</Text>
-        <TextInput
+      <View style={styles.loginContainer}>
+        <Text style={[styles.globalFont,{padding:10,textAlign:"center"}]}>REGISTER</Text>
+        <Text style={[styles.globalFont,{padding:10}]}>Username</Text>
+        <TextInput autoCapitalize="none"
           style={styles.textInput}
           onChangeText={(username) => this.setState({username})}
           value={this.state.username}
         />
 
-        <Text>Email</Text>
-        <TextInput
+        <Text style={[styles.globalFont,{padding:10}]}>Email</Text>
+        <TextInput autoCapitalize="none"
           style={styles.textInput}
           onChangeText={(email) => this.setState({email})}
           value={this.state.email}
         />
 
-        <Text>Password</Text>
-        <TextInput
+        <Text style={[styles.globalFont,{padding:10}]}>Password</Text>
+        <TextInput autoCapitalize="none"
           secureTextEntry={true}
           style={styles.textInput}
           onChangeText={(password) => this.setState({password})}
           value={this.state.password}
         />
 
-        <Button
-          onPress={() => this.register() }
-          title="Create Account" />
+        <TouchableHighlight onPress={() => this.register() }>
+          <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Create Account</Text>
+        </TouchableHighlight>
 
-        <Button
-          onPress={ this.pressMe.bind(this) }
-          title="already have an account?" />
+        <TouchableHighlight onPress={ this.pressMe.bind(this) }>
+          <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Already Have An Account?</Text>
+        </TouchableHighlight>
+
 
       </View>
     );
@@ -82,10 +88,4 @@ export default class RegisterScreen extends Component {
 }
 
 
-const styles = StyleSheet.create({
-  textInput: {
-    height: 40,
-    fontSize: 15,
-    backgroundColor: '#FFF',
-  },
-});
+AppRegistry.registerComponent('AwesomeProject', () => RegisterScreen);
