@@ -28,23 +28,23 @@ export default class HighScore extends Component {
   }
   render(){
     return (
-          <View style={styles.highScoreCotainer}>
-            <Text style={styles.highScoreText}>High Score</Text>
-              <View style={styles.PlayersScoreContainer}>
-                {this.state.highscore.map(function(user,i) {
-                  return (
-                    <PlayerHighScore
-                      key={i}
-                      user={user}
-                      index={i}
-                    />
-                  )
-                }
+      <View style={styles.highScoreCotainer}>
+        <Text style={styles.highScoreText}>High Score</Text>
+          <View style={styles.PlayersScoreContainer}>
+            {this.state.highscore.map(function(user,i) {
+              return (
+                <PlayerHighScore
+                  key={i}
+                  user={user}
+                  index={i}
+                />
               )
             }
-          </View>
-          <Image source={require('./imgs/ghost.png')} style={{width:220, height:50}}/>
-        </View>
+          )
+        }
+      </View>
+      <Image source={require('./imgs/ghost.png')} style={{width:220, height:50}}/>
+    </View>
     )
   }
 }
