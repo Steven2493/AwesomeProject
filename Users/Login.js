@@ -10,6 +10,7 @@ import {
   Button,
   TouchableHighlight,
   } from 'react-native';
+import axios from 'axios';
 
 import styles from '../Style'
 import axios from 'react-native-axios';
@@ -28,6 +29,7 @@ export default class LoginScreen extends Component {
     title: 'Welcome Back',
   };
 
+<<<<<<< HEAD
 
   // componentDidMount() {
   //   axios.post('http://localhost:8080/users')
@@ -40,6 +42,18 @@ export default class LoginScreen extends Component {
   //   })
   // }
 
+=======
+  componentDidMount() {
+    axios.post('http://localhost:8080/users')
+    .then((response) => {
+      console.log(response)
+      // let login = response.data
+      // this.setState({
+      //   email: this.response.
+      // })
+    })
+  }
+>>>>>>> Add axios
 
   render() {
     return (
