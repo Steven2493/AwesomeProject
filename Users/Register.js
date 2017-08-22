@@ -6,10 +6,9 @@ import {
   View,
   Button,
   AsyncStorage,
+  NavigatorIOS
   } from 'react-native';
 import axios from 'axios';
-
-const onRegister = () => AsyncStorage.setItem(USER_KEY, "true")
 
 export default class RegisterScreen extends Component {
   constructor(props) {
@@ -24,6 +23,7 @@ export default class RegisterScreen extends Component {
     this.props.press();
   }
 
+
   static navigationOptions = {
     title: 'Create a New Account'
   };
@@ -35,10 +35,12 @@ export default class RegisterScreen extends Component {
       password: this.state.password}
   })
   .then((response) => {
-    let user = response.data.id
+    let user = response.data.id.toString();
     this.setState({ userID: user });
-    AsyncStorage.setItem('userId', JSON.stringify(user))
-    navigate("SignedIn")
+    AsyncStorage.setItem('userId', this.state.userID )
+    this.props.navigate.push({
+      component: HomeScreen
+    })
   })
   .catch(function (error) {
     console.log(error)

@@ -58,7 +58,6 @@ export default class UserIndexScreen extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-
       <View style={styles.homeContainer}>
         <View style={styles.userStats}>
           <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
