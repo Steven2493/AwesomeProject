@@ -8,6 +8,7 @@ import {
   Text,
   View,
   Button,
+  AsyncStorage,
   } from 'react-native';
 import axios from 'axios';
 
@@ -15,9 +16,7 @@ export default class RegisterScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: '',
-      email: '',
-      password: '',
+      userID: '',
     }
     this.register = this.register.bind(this);
   }
@@ -37,7 +36,9 @@ export default class RegisterScreen extends Component {
       password: this.state.password}
   })
   .then((response) => {
-    console.log(response)
+    let user = response.data.id
+    this.setState({ userID: user });
+    AsyncStorage.setItem('userId', JSON.stringify(user))
   })
   .catch(function (error) {
     console.log(error)
