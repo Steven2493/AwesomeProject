@@ -5,7 +5,7 @@ export default StyleSheet.create({
 
   globalFont: {
     fontFamily: 'Pixeled',
-    color:'white'
+    color:'white',
   },
   // Css for HighScoreScreen.js
   highScoreText: {
@@ -121,4 +121,17 @@ export default StyleSheet.create({
   textYellow:{
     color:"yellow"
   },
+  //Defeat screen
+  defeatContainer:{
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  gameOver:{
+    fontFamily: 'Pixeled',
+    color:'white',
+    top:50,
+  }
+
 });
