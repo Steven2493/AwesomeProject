@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
-  Container,
   TextInput,
-  Label,
   Text,
   View,
   Button,
+  AsyncStorage,
   } from 'react-native';
+import axios from 'axios';
 
 export default class RegisterScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: '',
-      email: '',
-      password: '',
+      userID: '',
     }
+    this.register = this.register.bind(this);
   }
 
   pressMe(){
@@ -28,6 +26,22 @@ export default class RegisterScreen extends Component {
     title: 'Create a New Account'
   };
 
+  register = () => {
+    axios.post('http://localhost:8080/users', {register: {
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password}
+  })
+  .then((response) => {
+    let user = response.data.id
+    this.setState({ userID: user });
+    AsyncStorage.setItem('userId', JSON.stringify(user))
+  })
+  .catch(function (error) {
+    console.log(error)
+  })
+};
+
   render() {
 
     return (
@@ -35,24 +49,27 @@ export default class RegisterScreen extends Component {
         <Text>Username</Text>
         <TextInput
           style={styles.textInput}
-          onChangeText={(text) => this.setState({username:text})}
+          onChangeText={(username) => this.setState({username})}
+          value={this.state.username}
         />
 
         <Text>Email</Text>
         <TextInput
           style={styles.textInput}
-          onChangeText={(text) => this.setState({email:text})}
+          onChangeText={(email) => this.setState({email})}
+          value={this.state.email}
         />
 
         <Text>Password</Text>
         <TextInput
           secureTextEntry={true}
           style={styles.textInput}
-          onChangeText={(text) => this.setState({password:text})}
+          onChangeText={(password) => this.setState({password})}
+          value={this.state.password}
         />
 
         <Button
-          onPress={() => navigate('#')}
+          onPress={() => this.register() }
           title="Create Account" />
 
         <Button
@@ -72,4 +89,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
 });
-
