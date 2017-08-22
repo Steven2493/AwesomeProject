@@ -10,7 +10,7 @@ export default StyleSheet.create({
   // Css for HighScoreScreen.js
   highScoreText: {
     color: 'white',
-    bottom:60,
+    bottom:50,
     fontSize:20,
     fontFamily:'Pixeled'
   },
@@ -99,5 +99,26 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#182445',
     justifyContent: 'center',
-  }
+  },
+  homeScreenText: {
+    textAlign:"center",
+    color:"white",
+    fontSize:10,
+    padding: 5,
+    fontFamily: "Pixeled"
+  },
+  homeScreenNav:{
+    color:"white",
+    fontSize:10,
+    padding: 5,
+    fontFamily: "Pixeled",
+    textAlign: "center",
+  },
+  userStats:{
+    bottom:80,
+    justifyContent: 'center',
+  },
+  textYellow:{
+    color:"yellow"
+  },
 });

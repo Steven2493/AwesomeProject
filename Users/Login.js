@@ -7,6 +7,9 @@ import {
   Button,
   AsyncStorage,
   } from 'react-native';
+
+import styles from '../Style'
+
 import axios from 'axios';
 
 export default class LoginScreen extends Component {

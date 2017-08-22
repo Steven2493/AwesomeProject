@@ -16,21 +16,17 @@ export default class HighScore extends Component {
 
   constructor(){
     super()
-
     this.state = {
       highscore: []
     }
   }
-
   componentWillMount(){
     axios.get('http://localhost:3000/scores')
     .then((response) => {
       this.setState({highscore: response.data})
     })
   }
-
   render(){
-
     return (
           <View style={styles.highScoreCotainer}>
             <Text style={styles.highScoreText}>High Score</Text>
@@ -47,6 +43,7 @@ export default class HighScore extends Component {
               )
             }
           </View>
+          <Image source={require('./imgs/ghost.png')} style={{width:220, height:50}}/>
         </View>
     )
   }

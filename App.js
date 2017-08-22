@@ -3,14 +3,17 @@ import {
   AppRegistry,
   Text,
   View,
+  ListView,
   Button,
   AsyncStorage,
+  TouchableHighlight,
   } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import styles from './Style'
 
-import axios from 'react-native-axios';
+// import axios from 'react-native-axios';
+import axios from 'axios';
 import ControlScreen from './Users/UserControl.js';
 
 import AwesomeProjectScreen from './Map.js';
@@ -58,18 +61,23 @@ class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.homeContainer}>
-        <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
-        <Text style={styles.globalFont}> personal best: {this.state.highscorePoints} points on {this.state.highscoreDate} </Text>
-        <Text style={styles.globalFont}> Recent games: </Text>
-        {this.state.recentGames.map((game, i) => {
-          return <Text key={i} style={styles.globalFont} > - points: {game.score}, duration: {game.duration}, played on: {game.created_at} </Text>
-        })}
-        <Button
-          onPress={() => navigate('Global')}
-          title="Global High Scores" />
-        <Button
-          onPress={() => navigate('AwesomeProject')}
-          title="New Game" />
+
+        <View style={styles.userStats}>
+          <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
+          <Text style={styles.homeScreenText}> Personal Best:{"\n"} {this.state.highscorePoints} Points On {this.state.highscoreDate} </Text>
+          <Text style={styles.homeScreenText}> Recent Game: </Text>
+          {this.state.recentGames.map((game, i) => {
+            return <Text key={i} style={styles.homeScreenText}>     Points: {game.score}{"\n"}     Duration: {game.duration}{"\n"}     Played On: {game.created_at}</Text>
+          })}
+        </View>
+          <View>
+            <TouchableHighlight onPress={() => navigate('Global')}>
+              <Text style={[styles.homeScreenText, styles.textYellow]}>Global High Score</Text>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => navigate('AwesomeProject')}>
+              <Text style={[styles.homeScreenText, styles.textYellow]}>New Game</Text>
+            </TouchableHighlight>
+          </View>
       </View>
     )
   }
@@ -81,7 +89,8 @@ class HomeScreen extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.homeContainer} >
+
+      <View style={styles.homeContainer}>
        { this.state.userid === "" ? <ControlScreen /> : this.userPage() }
       </View>
     );
