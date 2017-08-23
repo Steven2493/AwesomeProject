@@ -6,7 +6,6 @@ import {
   View,
   Button,
   AsyncStorage,
-  NavigatorIOS,
   AppRegistry,
   TouchableHighlight,
 
@@ -42,10 +41,7 @@ export default class LoginScreen extends Component {
       let user = response.data.id.toString();
       this.setState({ userID: user });
       AsyncStorage.setItem('userId', this.state.userID)
-      debugger
-      this.props.navigate.push({
-      component: HomeScreen
-    })
+      this.props.navigation.navigate("Home")
     })
     .catch(function (error) {
       console.log(error)
