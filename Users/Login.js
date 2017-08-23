@@ -33,7 +33,7 @@ export default class LoginScreen extends Component {
     })
     .then((response) => {
       let user = response.data.id
-      this.setState({ userID: user });mail.
+      this.setState({ userID: user });
       AsyncStorage.setItem('userId', JSON.stringify(user))
     })
     .catch(function (error) {
@@ -68,5 +68,3 @@ export default class LoginScreen extends Component {
     );
   }
 }
-
-
