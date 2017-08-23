@@ -29,19 +29,17 @@ export default class UserIndexScreen extends Component {
   componentDidMount() {
 
     AsyncStorage.getItem("userId").then((value) => {
-      console.log(value)
       this.setState({userid: value});
       axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
         .then((response) => {
-        console.log(response)
-        console.log(this.state.userid)
         let games = response.data.map((game) => {
           return game
         })
+        games.pop();
         this.setState({
           highscorePoints: response.data[0].highscore_score,
           highscoreDate: response.data[0].highscore_date,
-          username: response.data[0].username,
+          username: response.data[response.data.length-1].username,
           recentGames: games
         })
       })

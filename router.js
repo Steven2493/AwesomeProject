@@ -11,13 +11,16 @@ import AwesomeProjectScreen from "./Map.js";
 
 export const SignedOut = StackNavigator({
   SignUp: {
-    screen: UserControlScreen
+    screen: RegisterScreen,
+    navigationOptions: {
+      tabBarLabel: "Sign Up"
+    }
   },
   Login: {
-    screen: LoginScreen
-  },
-  Register: {
-    screen: RegisterScreen
+    screen: LoginScreen,
+    navigationOptions: {
+      tabBarLabel: "Welcome Back!"
+    }
   }
 });
 
@@ -43,13 +46,15 @@ export const createRootNavigator = (signedIn = false) => {
         screen: SignedIn
       },
       SignedOut: {
-        screen: UserControlScreen
+        screen: SignedOut
       },
       Global: {
         screen: HighScoreScreen
       }
     },
     {
+      headerMode: "none",
+      mode: "modal",
       initialRouteName: signedIn ? "SignedIn" : "SignedOut"
     }
   );

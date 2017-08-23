@@ -8,11 +8,11 @@ import {
   Button,
   TouchableHighlight,
   AsyncStorage,
-  NavigatorIOS
   } from 'react-native';
 
 import axios from 'axios';
 import styles from '../Style'
+// import { StackNavigator } from 'react-navigation';
 
 export default class RegisterScreen extends Component {
   constructor(props) {
@@ -22,11 +22,6 @@ export default class RegisterScreen extends Component {
     }
     this.register = this.register.bind(this);
   }
-
-  pressMe(){
-    this.props.press();
-  }
-
 
   static navigationOptions = {
     title: 'Create a New Account'
@@ -42,9 +37,7 @@ export default class RegisterScreen extends Component {
     let user = response.data.id.toString();
     this.setState({ userID: user });
     AsyncStorage.setItem('userId', this.state.userID )
-    this.props.navigate.push({
-      component: HomeScreen
-    })
+    this.props.navigation.navigate("Home")
   })
   .catch(function (error) {
     console.log(error)
@@ -52,7 +45,7 @@ export default class RegisterScreen extends Component {
 };
 
   render() {
-
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.loginContainer}>
         <Text style={[styles.globalFont,{padding:10,textAlign:"center"}]}>REGISTER</Text>
@@ -81,7 +74,7 @@ export default class RegisterScreen extends Component {
           <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Create Account</Text>
         </TouchableHighlight>
 
-        <TouchableHighlight onPress={ this.pressMe.bind(this) }>
+        <TouchableHighlight onPress={() => navigate("Login") }>
           <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Already Have An Account?</Text>
         </TouchableHighlight>
 

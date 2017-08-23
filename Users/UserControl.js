@@ -35,7 +35,7 @@ export default class UserControlScreen extends Component {
 
     return (
       <View>
-        { this.state.view }
+
       </View>
       )
   }
