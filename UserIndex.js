@@ -8,7 +8,7 @@ import {
   AsyncStorage,
   TouchableHighlight,
   } from 'react-native';
-
+import AwesomeProjectScreen from "./Map.js";
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import styles from './Style'
 import axios from 'react-native-axios';
@@ -20,7 +20,6 @@ const START_TIME = (TIME.getHours() + ":" + TIME.getMinutes() + ":" + TIME.getSe
 
 
 export default class UserIndexScreen extends Component {
-
   constructor(){
     super()
     this.state = {
@@ -62,10 +61,10 @@ export default class UserIndexScreen extends Component {
       end_time: START_TIME}
     })
     .then((response) => {
-      console.log(response)
       let game = response.data.id
       this.setState({ gameID: game})
       AsyncStorage.setItem('gameId', JSON.stringify(game))
+      this.props.navigation.navigate("AwesomeProject")
     })
     .catch(function (error) {
       console.log(error)
@@ -90,7 +89,7 @@ export default class UserIndexScreen extends Component {
             })}
         </View>
         <View>
-          <TouchableHighlight onPress={() => this.createGame()}>
+          <TouchableHighlight onPress={() => navigate('Global')}>
             <Text style={[styles.homeScreenText, styles.textYellow]}>Global High Score</Text>
           </TouchableHighlight>
           <TouchableHighlight onPress={() => this.createGame() }>
