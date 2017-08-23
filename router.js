@@ -24,17 +24,17 @@ export const SignedOut = StackNavigator({
   }
 });
 
-export const SignedIn = TabNavigator({
+export const SignedIn = StackNavigator({
   Home: {
     screen: UserIndexScreen,
     navigationOptions: {
-    tabBarLabel: "Home"
+      tabBarLabel: "Home"
     }
   },
-  AwesomeProject: {
-    screen: AwesomeProjectScreen,
+  Global: {
+    screen: HighScoreScreen,
     navigationOptions: {
-    tabBarLabel: "Game"
+      tabBarLabel: "Highscores"
     }
   }
 });
@@ -48,8 +48,8 @@ export const createRootNavigator = (signedIn = false) => {
       SignedOut: {
         screen: SignedOut
       },
-      Global: {
-        screen: HighScoreScreen
+      AwesomeProject: {
+        screen: AwesomeProjectScreen
       }
     },
     {

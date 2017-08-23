@@ -18,7 +18,7 @@ import { createRootNavigator } from './router.js';
 
 
 //user is hardcoded right here - once login/register works remove this line
-// AsyncStorage.setItem('userId', '3');
+AsyncStorage.setItem('userId', '2');
 // AsyncStorage.removeItem('userId');
 
 isSignedIn = () => {

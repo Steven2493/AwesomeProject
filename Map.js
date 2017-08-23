@@ -21,9 +21,6 @@ const LATTITUDE_DELTA = 0.0922
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO
 
 export default class AwesomeProjectScreen extends Component {
-  static navigationOptions = {
-    title: 'PacMan',
-  };
   constructor(props) {
        super(props)
 
