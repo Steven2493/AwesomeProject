@@ -34,7 +34,8 @@ export const SignedIn = TabNavigator({
   AwesomeProject: {
     screen: AwesomeProjectScreen,
     navigationOptions: {
-    tabBarLabel: "Game"
+    tabBarLabel: "Game",
+    drawerLockMode: 'locked-closed'
     }
   }
 });
