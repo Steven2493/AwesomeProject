@@ -8,13 +8,18 @@ import {
   AsyncStorage,
   TouchableHighlight,
   } from 'react-native';
-
+import AwesomeProjectScreen from "./Map.js";
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import styles from './Style'
 import axios from 'react-native-axios';
 
-export default class UserIndexScreen extends Component {
+AsyncStorage.setItem('userId', "16")
 
+const TIME = new Date ()
+const START_TIME = (TIME.getHours() + ":" + TIME.getMinutes() + ":" + TIME.getSeconds())
+
+
+export default class UserIndexScreen extends Component {
   constructor(){
     super()
     this.state = {
@@ -22,16 +27,17 @@ export default class UserIndexScreen extends Component {
       username: "",
       highscorePoints: "",
       highscoreDate: "",
-      recentGames: []
+      recentGames: [],
+      gameID: ''
     }
   }
 
   componentDidMount() {
-    AsyncStorage.getItem("userId").then((value) => {
+
+    AsyncStorage.getItem('userId').then((value) => {
       this.setState({userid: value});
       axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
         .then((response) => {
-          console.log(response)
         let games = response.data.map((game) => {
           return game
         })
@@ -48,6 +54,24 @@ export default class UserIndexScreen extends Component {
       });
     }).done();
   }
+
+  createGame = () => {
+    axios.post('http://localhost:8080/games', {game: {
+      user: parseInt(this.state.userid),
+      score: 0,
+      start_time: START_TIME,
+      end_time: START_TIME}
+    })
+    .then((response) => {
+      let game = response.data.id
+      this.setState({ gameID: game})
+      AsyncStorage.setItem('gameId', JSON.stringify(game))
+      this.props.navigation.navigate("AwesomeProject")
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+  };
 
   static navigationOptions = {
     title: "Stats",
@@ -69,7 +93,7 @@ export default class UserIndexScreen extends Component {
           <TouchableHighlight onPress={() => navigate('Global')}>
             <Text style={[styles.homeScreenText, styles.textYellow]}>Global High Score</Text>
           </TouchableHighlight>
-          <TouchableHighlight onPress={() => navigate('AwesomeProject')}>
+          <TouchableHighlight onPress={() => this.createGame() }>
             <Text style={[styles.homeScreenText, styles.textYellow]}>New Game</Text>
           </TouchableHighlight>
         </View>
