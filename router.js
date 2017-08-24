@@ -34,7 +34,10 @@ export const SignedIn = StackNavigator({
   Global: {
     screen: HighScoreScreen,
     navigationOptions: {
-      tabBarLabel: "Highscores"
+
+    tabBarLabel: "Game",
+    drawerLockMode: 'locked-closed'
+
     }
   }
 });
