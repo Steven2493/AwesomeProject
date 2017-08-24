@@ -1,6 +1,9 @@
 import { StackNavigator, TabNavigator } from "react-navigation";
 
 import UserControlScreen from "./Users/UserControl.js";
+import LoginScreen from "./Users/Login.js";
+import RegisterScreen from "./Users/Register.js";
+
 import UserIndexScreen from "./UserIndex.js";
 import HighScoreScreen from "./HighScoreScreen.js";
 import AwesomeProjectScreen from "./Map.js";
@@ -8,21 +11,30 @@ import AwesomeProjectScreen from "./Map.js";
 
 export const SignedOut = StackNavigator({
   SignUp: {
-    screen: UserControlScreen
+    screen: RegisterScreen,
+    navigationOptions: {
+      tabBarLabel: "Sign Up"
+    }
+  },
+  Login: {
+    screen: LoginScreen,
+    navigationOptions: {
+      tabBarLabel: "Welcome Back!"
+    }
   }
 });
 
-export const SignedIn = TabNavigator({
+export const SignedIn = StackNavigator({
   Home: {
     screen: UserIndexScreen,
     navigationOptions: {
-    tabBarLabel: "Home"
+      tabBarLabel: "Home"
     }
   },
-  AwesomeProject: {
-    screen: AwesomeProjectScreen,
+  Global: {
+    screen: HighScoreScreen,
     navigationOptions: {
-    tabBarLabel: "Game"
+      tabBarLabel: "Highscores"
     }
   }
 });
@@ -34,13 +46,15 @@ export const createRootNavigator = (signedIn = false) => {
         screen: SignedIn
       },
       SignedOut: {
-        screen: UserControlScreen
+        screen: SignedOut
       },
-      Global: {
-        screen: HighScoreScreen
+      AwesomeProject: {
+        screen: AwesomeProjectScreen
       }
     },
     {
+      headerMode: "none",
+      mode: "modal",
       initialRouteName: signedIn ? "SignedIn" : "SignedOut"
     }
   );

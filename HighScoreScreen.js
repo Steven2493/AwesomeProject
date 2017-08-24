@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 import PlayerHighScore from './PlayerHighScore';
-import axios from 'react-native-axios'
+import axios from 'axios'
 import styles from './Style'
 
 export default class HighScore extends Component {
@@ -21,11 +21,16 @@ export default class HighScore extends Component {
     }
   }
   componentWillMount(){
-    axios.get('http://localhost:3000/scores')
+    axios.get('https://phatpac.herokuapp.com/scores')
     .then((response) => {
       this.setState({highscore: response.data})
     })
   }
+
+  static navigationOptions = {
+    title: "Global Highscores",
+  };
+
   render(){
     return (
       <View style={styles.highScoreCotainer}>

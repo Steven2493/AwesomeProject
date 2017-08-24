@@ -12,8 +12,11 @@ import {
 
 import LoginScreen from './Login.js';
 import RegisterScreen from './Register.js';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 
-export default class ControlScreen extends Component {
+
+export default class UserControlScreen extends Component {
+
   loginView(){
     this.setState({view: <LoginScreen /> })
   }
@@ -21,16 +24,18 @@ export default class ControlScreen extends Component {
   constructor(){
     super()
     this.loginView = this.loginView.bind(this)
+
     this.state = {
-      view: <RegisterScreen press={this.loginView} />
+      view: <RegisterScreen press={this.loginView}  />
     }
 
   }
 
   render(){
+
     return (
       <View>
-        { this.state.view }
+
       </View>
       )
   }

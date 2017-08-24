@@ -18,8 +18,8 @@ import { createRootNavigator } from './router.js';
 
 
 //user is hardcoded right here - once login/register works remove this line
-// AsyncStorage.setItem('userId', '3');
- // AsyncStorage.removeItem('userId');
+AsyncStorage.setItem('userId', '2');
+// AsyncStorage.removeItem('userId');
 
 isSignedIn = () => {
   return new Promise((resolve, reject) => {
@@ -47,8 +47,12 @@ export class HomeScreen extends Component {
 
   componentWillMount() {
     isSignedIn()
-      .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
-      .catch(err => alert("An error occurred"));
+      .then(res => {
+        this.setState({ signedIn: res, checkedSignIn: true }
+          )})
+      .catch(err => {
+        alert("An error occurred")
+      });
   }
 
   render() {

@@ -6,13 +6,17 @@ import {
   View,
   Button,
   AsyncStorage,
+  AppRegistry,
+  TouchableHighlight,
+
   } from 'react-native';
 
 import styles from '../Style'
-
+import { StackNavigator } from 'react-navigation';
 import axios from 'axios';
 
 export default class LoginScreen extends Component {
+
   constructor(props) {
     super(props)
 
@@ -21,6 +25,8 @@ export default class LoginScreen extends Component {
     }
     this.login = this.login.bind(this);
   }
+
+
 
   static navigationOptions = {
     title: 'Welcome Back',
@@ -32,38 +38,38 @@ export default class LoginScreen extends Component {
       password: this.state.password}
     })
     .then((response) => {
-      let user = response.data.id
+      let user = response.data.id.toString();
       this.setState({ userID: user });
-      AsyncStorage.setItem('userId', JSON.stringify(user))
+      AsyncStorage.setItem('userId', this.state.userID)
+      this.props.navigation.navigate("Home")
     })
     .catch(function (error) {
       console.log(error)
     })
+
   };
+
 
   render() {
     return (
-      <View>
-
-          <Text>Email</Text>
-          <TextInput
+      <View style={styles.loginContainer}>
+          <Text style={[styles.globalFont,{padding:10}]}>Email</Text>
+          <TextInput autoCapitalize="none"
             style={styles.textInput}
             onChangeText={(email) => this.setState({email})}
             value={this.state.email}
           />
-
-          <Text>Password</Text>
-          <TextInput
+          <Text style={[styles.globalFont,{padding:10}]}>Password</Text>
+          <TextInput autoCapitalize="none"
             style = {styles.textInput}
             secureTextEntry={true}
             onChangeText={(password) => this.setState({password})}
             value={this.state.password}
           />
 
-          <Button
-            onPress={() => this.login() }
-            title="Login" />
-
+          <TouchableHighlight onPress={() => this.login() }>
+            <Text style={[styles.globalFont,{textAlign:"center",color:"yellow"}]}>Login </Text>
+          </TouchableHighlight>
       </View>
     );
   }

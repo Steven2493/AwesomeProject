@@ -33,6 +33,7 @@ export default class UserIndexScreen extends Component {
   }
 
   componentDidMount() {
+
     AsyncStorage.getItem('userId').then((value) => {
       this.setState({userid: value});
       axios.get('https://phatpac.herokuapp.com/users/' + this.state.userid )
@@ -40,10 +41,11 @@ export default class UserIndexScreen extends Component {
         let games = response.data.map((game) => {
           return game
         })
+        games.pop();
         this.setState({
           highscorePoints: response.data[0].highscore_score,
           highscoreDate: response.data[0].highscore_date,
-          username: response.data[0].username,
+          username: response.data[response.data.length-1].username,
           recentGames: games
         })
       })
@@ -78,12 +80,11 @@ export default class UserIndexScreen extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-
       <View style={styles.homeContainer}>
         <View style={styles.userStats}>
           <Text style={styles.globalFont}> Hello, {this.state.username}!</Text>
-          <Text style={styles.homeScreenText}> Personal Best:{"\n"} {this.state.highscorePoints} Points On {this.state.highscoreDate} </Text>
-          <Text style={styles.homeScreenText}> Recent Game: </Text>
+          <Text style={styles.homeScreenText}> Personal Best:{"\n"} { this.state.highscorePoints ? this.state.highscorePoints + " Points On " : "No games played yet"} {this.state.highscoreDate  ? this.state.highscoreDate : "-"} </Text>
+          <Text style={styles.homeScreenText}> Recent Games: </Text>
             {this.state.recentGames.map((game, i) => {
               return <Text key={i} style={styles.homeScreenText}>     Points: {game.score}{"\n"}     Duration: {game.duration}{"\n"}     Played On: {game.created_at}</Text>
             })}
