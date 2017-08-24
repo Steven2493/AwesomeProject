@@ -26,6 +26,11 @@ export default class HighScore extends Component {
       this.setState({highscore: response.data})
     })
   }
+
+  static navigationOptions = {
+    title: "Global Highscores",
+  };
+
   render(){
     return (
       <View style={styles.highScoreCotainer}>
